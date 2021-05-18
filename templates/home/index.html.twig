@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="card col-md-6">
+          <div class="card-body">
+            <div class="card-title">
+              <h3> Surface of Triangle </h3>
+              <p>
+              {{ form(form_triangle, {'method': 'POST'}) }}
+              <h5>The surface of the triangle is {{ result_triangle }}</h5>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card col-md-6">
+          <div class="card-body">
+            <div class="card-title">
+              <h3> Diameter of Circle </h3>
+              {{ form(form_circle, {'method': 'POST'}) }}
+              <h5>The diameter of the circle is {{ result_circle }}</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
